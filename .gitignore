@@ -1,0 +1,45 @@
+### Build / generated files ###
+target/
+build/
+*.log
+
+### Maven Wrapper ###
+# Keep .mvn, mvnw and mvnw.cmd in Git
+!.mvn/wrapper/maven-wrapper.jar
+
+### Local / sensitive configuration ###
+.env
+.env.*
+*.local
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Kotlin ###
+.kotlin/
+
+### OS ###
+.DS_Store
+Thumbs.db
