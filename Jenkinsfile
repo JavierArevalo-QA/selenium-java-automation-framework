@@ -40,12 +40,32 @@ pipeline {
     }
 
     post {
-
         always {
+
             archiveArtifacts(
                 artifacts: 'target/reports/**/*,target/cucumber-report.html,target/cucumber.json',
                 allowEmptyArchive: true
             )
+
+            publishHTML(target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'target/reports',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent Report',
+                reportTitles: 'OrangeHRM Automation Report'
+            ])
+
+            publishHTML(target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'target',
+                reportFiles: 'cucumber-report.html',
+                reportName: 'Cucumber Report',
+                reportTitles: 'Cucumber BDD Report'
+            ])
         }
     }
 }
