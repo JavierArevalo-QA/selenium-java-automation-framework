@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    environment {
+            JAVA_HOME = 'C:\\Users\\jarevalo\\.jdks\\ms-21.0.12.1'
+            PATH = "${JAVA_HOME}\\bin;${env.PATH}"
+        }
     parameters {
         choice(
             name: 'BROWSER',
